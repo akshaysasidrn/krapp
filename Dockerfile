@@ -6,5 +6,6 @@ COPY Gemfile .
 COPY Gemfile.lock .
 RUN bundle install
 COPY . .
+RUN bundle exec rails db:migrate
 EXPOSE 3000
 CMD bundle exec rails server
