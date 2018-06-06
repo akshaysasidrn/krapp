@@ -1,0 +1,15 @@
+current directory: /Users/akshaysasidharan/workshop/krapp/vendor/ruby/2.5.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+/Users/akshaysasidharan/.rvm/rubies/ruby-2.5.1/bin/ruby -r ./siteconf20180606-98909-1ooza39.rb extconf.rb
+creating Makefile
+
+current directory: /Users/akshaysasidharan/workshop/krapp/vendor/ruby/2.5.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /Users/akshaysasidharan/workshop/krapp/vendor/ruby/2.5.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+
+current directory: /Users/akshaysasidharan/workshop/krapp/vendor/ruby/2.5.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 websocket_mask.bundle ./.gem.20180606-98909-dolucn
