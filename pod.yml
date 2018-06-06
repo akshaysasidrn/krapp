@@ -7,6 +7,6 @@ metadata:
 spec:
   containers:
   - name: krapp
-    image: iffyuva/krapp:latest
+    image: aksh93/krapp:latest
     ports:
     - containerPort: 3000
