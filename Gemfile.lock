@@ -41,6 +41,7 @@ GEM
     arel (8.0.0)
     builder (3.2.3)
     concurrent-ruby (1.0.5)
+    connection_pool (2.2.2)
     crass (1.0.4)
     erubi (1.7.1)
     globalid (0.4.1)
@@ -61,6 +62,8 @@ GEM
       mini_portile2 (~> 2.3.0)
     puma (3.11.4)
     rack (2.0.5)
+    rack-protection (2.0.2)
+      rack
     rack-test (1.0.0)
       rack (>= 1.0, < 3)
     rails (5.1.6)
@@ -87,6 +90,12 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (12.3.1)
+    redis (4.0.1)
+    sidekiq (5.1.3)
+      concurrent-ruby (~> 1.0)
+      connection_pool (~> 2.2, >= 2.2.0)
+      rack-protection (>= 1.5.0)
+      redis (>= 3.3.5, < 5)
     sprockets (3.7.1)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -109,6 +118,7 @@ PLATFORMS
 DEPENDENCIES
   puma (~> 3.7)
   rails (~> 5.1.5)
+  sidekiq
   sqlite3
 
 BUNDLED WITH

@@ -1,1 +1,12 @@
 <h1>Hey, there we are on K8s</h1>
+
+<%= button_to "Enqueue job to create comment", '/welcome'%>
+
+<br/>
+<br/>
+
+<% Comment.all.each do |c| %>
+  <div>
+    <b> <%= c.comment %> </b>
+  </div>
+<% end %>

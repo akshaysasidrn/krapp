@@ -3,7 +3,7 @@ kind: ReplicaSet
 metadata:
   name: krapp-replicaset
 spec:
-  replicas: 2
+  replicas: 5
   selector:
     matchLabels:
       app: rails-puma

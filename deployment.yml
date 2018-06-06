@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: krapp-deployment
 spec:
-  replicas: 10
+  replicas: 5
   selector:
     matchLabels:
       app: rails-puma
