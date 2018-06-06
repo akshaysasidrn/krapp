@@ -1,0 +1,20 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: krapp-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rails-puma
+  template:
+    metadata:
+      labels:
+        app: rails-puma
+    spec:
+      containers:
+        - name: krapp
+          image: aksh93/krapp:latest
+          command: ["bundle exec sidekiq"]
+          ports:
+            - containerPort: 3000
