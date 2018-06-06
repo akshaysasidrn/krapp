@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: krapp
+  labels:
+    app: rails-puma
+spec:
+  containers:
+  - name: krapp
+    image: iffyuva/krapp:latest
+    ports:
+    - containerPort: 3000

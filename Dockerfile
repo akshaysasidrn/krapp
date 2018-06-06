@@ -1,8 +1,9 @@
 FROM ruby:2.5.1-alpine
-RUN mkdir /app
+RUN apk --update upgrade && apk add --no-cache build-base sqlite-dev tzdata
+RUN mkdir -p /app
 WORKDIR /app
-COPY ./Gemfile ./Gemfile.lock ./
-RUN gem install bundler
+COPY Gemfile .
+COPY Gemfile.lock .
 RUN bundle install
 COPY . .
 EXPOSE 3000

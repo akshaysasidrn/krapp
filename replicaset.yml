@@ -1,0 +1,19 @@
+apiVersion: apps/v1beta2
+kind: ReplicaSet
+metadata:
+  name: krapp-replicaset
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: rails-puma
+  template:
+    metadata:
+      labels:
+        app: rails-puma
+    spec:
+      containers:
+        - name: krapp
+          image: iffyuva/krapp:latest
+          ports:
+            - containerPort: 3000

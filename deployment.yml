@@ -1,0 +1,19 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: krapp-deployment
+spec:
+  replicas: 100
+  selector:
+    matchLabels:
+      app: rails-puma
+  template:
+    metadata:
+      labels:
+        app: rails-puma
+    spec:
+      containers:
+        - name: krapp
+          image: iffyuva/krapp:latest
+          ports:
+            - containerPort: 3000
